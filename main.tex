@@ -134,12 +134,12 @@
 \begin{center}
     \textbf{\Huge \scshape Zixi (Charlie) Chen} \\ \vspace{3pt}
     \small
-    \faMobile \hspace{.5pt} \href{tel:6462392688}{+1 646 239 2688}
-    $|$
+    % \faMobile \hspace{.5pt} \href{tel:6462392688}{+1 646 239 2688}
+    % $|$
     \faAt \hspace{.5pt} \href{mailto:charlie.chen@nyu.edu}{charlie.chen@nyu.edu}
     $|$
-    \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/charliezxchen/}{LinkedIn}
-    $|$
+    % \faLinkedinSquare \hspace{.5pt} \href{https://www.linkedin.com/in/charliezxchen/}{LinkedIn}
+    % $|$
     \faGithub \hspace{.5pt} \href{https://github.com/charliezchen/}{GitHub}
     $|$
     \faGlobe \hspace{.5pt} \href{https://charliezchen.github.io/}{Website}
@@ -176,14 +176,14 @@
         {Non-parametric Maximum Likelihood Estimation (NPMLE) Research}{April 2023 - Present}
         \resumeItemListStart
             \resumeItem{Implemented NPMLE by frank-wolfe algorithm to estimate the distribution of one-dimensional one mixture and two mixtures Gaussian distributions and evaluate the log likelihood, the number of support, and the 1-Wasserstein distance.}
-            \resumeItem{Investigated the self-regularizing effect of NPMLE by fitting the 1-Wasserstein distance with the number of samples, showing that NPMLE demonstrates some degree of self-regularizing effect.}
+            \resumeItem{Investigated the self-regularizing effect of NPMLE by fitting the 1-Wasserstein metric with the number of samples. The one mixture exhibits a convergence rate of $O(n^{-0.6})$ whereas the two mixture case exhibits a convergence rate of $O(n^{-0.1})$, the reasons of which is still actively investigated.}
         \resumeItemListEnd
     \resumeSubheading
       {New York University}{New York, NY}
       {Applied Math Summer Undergraduate Research Experience (AM-SURE)}{May 2023 \textbf{--} July 2023}
         \resumeItemListStart
-            \resumeItem{Implemented the algorithms invented by the paper of Projective Embedding of Dynamical Systems (PEDS), which heuistically boost global convergence rate by converting local maximum to saddle points.}
-            \resumeItem{Improved the algorithm in convergence speed and convergence rate by generalizing it in the perspective of distribution optimization, which can be optimized by Stochastic Gradient Descent (SGD).}
+            \resumeItem{Implemented the algorithms invented by the paper of Projective Embedding of Dynamical Systems (PEDS), a generic Swarm Particle Optimization algorithm, which heuistically boosts global convergence rate by optimizing several particles simultaneously with their average gradients and an attraction force.}
+            \resumeItem{Treated the problem from the perspective of Stochastic Approximation (SA) and randomized smoothing and proposed an improved algorithm using stochastic sampling and gradient descent, which improved the convergence speed and global convergece rate significantly.}
         \resumeItemListEnd
     
   \resumeSubHeadingListEnd
@@ -197,15 +197,36 @@
         {New York Univeristy}{New York, NY}
         {Exotic Derivative Pricing}{May 2023}
         \resumeItemListStart
-            \resumeItem{Modeled the price of an option involving stock price and LIBOR rate in the Japan market by utilizing the Hull-White model and Monte Carlo simulations.}
-        \resumeItemListEnd
+            \resumeItem{Modeled the interest rate by the Hull-White model and calibrate the parameters with the long term interest rate of goverment T-Bond.}
+            \resumeItem{Predicted the price of the option by the predicted interest rate and LIBOR rate using Monte Carlo simulations}
+    \resumeItemListEnd
     \resumeSubheading
       {New York University}{New York, NY}
       {Financial Changepoint Detection}{Jan 2023}
         \resumeItemListStart
-            \resumeItem{Utilized Gaussian Process to identify the changepoints in the financial time series of the exchange rate of foreign currencies.}
-        \resumeItemListEnd
-    
+            \resumeItem{Identified changepoint if the time series can be significantly better modeled by two Gaussian Processes divided at that time rather than one Gaussian Process.}
+            \resumeItem{Backtested the strategy with the added mean reversion strategy at the predicted changepoints and the new algorithm outperforms the baseline.}
+    \resumeItemListEnd
+    \resumeSubheading
+      {New York University}{New York, NY}
+      {Uncertainty Approximation in Recommendation System}{Dec 2022}
+      \resumeItemListStart
+        \resumeItem{Estimated the uncertainties in recommendation system by adopting dropout layer.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {New York University}{New York, NY}
+      {A Brief Summary of a seminal multiple testing paper}{Dec 2022}
+      \resumeItemListStart
+        \resumeItem{Summarized and supplemented the proof details in the paper "Controlling the False Discovery Rate: a Practical and Powerful Approach to Multiple Testing".}
+      \resumeItemListEnd
+    \resumeSubheading
+      {New York University}{New York, NY}
+      {Adversarial Logit Separation}{May 2022}
+      \resumeItemListStart
+        \resumeItem{Proposed a new adversarial training method, called Adversarial Logit Separation, which trains an ensemble of models that maximize the cosine distance between their logit outputs to increase the model diversity.}
+        \resumeItem{Conducted experiments to show that Adversarial Logit Separation outperforms baseline methods.}
+      \resumeItemListEnd
+
   \resumeSubHeadingListEnd
 
 %----------- WORK EXPERIENCE -----------
@@ -214,14 +235,27 @@
   \vspace{3pt}
   \resumeSubHeadingListStart
     \resumeSubheading
+      {New York University}{New York, NY}
+      {Teaching Assistant for the undergraduate class Operating System}{Feb 2023 \textbf{--} May 2023}
+        \resumeItemListStart
+            \resumeItem{Held biweekly review session to strengthen the understanding of students.}
+            \resumeItem{Held weekly office hour to answer students' questions.}
+        \resumeItemListEnd
+    \resumeSubheading
       {Grammatech Inc.}{Ithaca, NY (Remote from NYC)}
-      {Software Engineer}{Jun 2022 \textbf{--} Aug 2022}
+      {Software Engineer Intern}{Jun 2022 \textbf{--} Aug 2022}
         \resumeItemListStart
             \resumeItem{Researched and implemented new code security checks and standard industrial metric reporting for CodeSonar, a leading static analysis tool.}
             \resumeItem{Re-engineered hundreds of lines of Python code into C++, resulting in a 25-fold speed increase.}
             % \resumeItem{Added approximately 8,500 lines and eliminated 3,300 lines of code in the main git repository, enhancing code quality and system functionality.}
         \resumeItemListEnd
-    
+    \resumeSubheading
+      {Tencent Inc.}{Shanghai, China}
+      {Software Engineer Intern}{Dec 2020 \textbf{--} May 2021}
+        \resumeItemListStart
+            \resumeItem{Developed on an AI-accelerated computer vision module by training and deploying new algorithms onto the hardware.}
+            \resumeItem{Researched state-of-the-art recommendation solutions and created demo on the cloud computing platforms.}
+        \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -231,12 +265,11 @@
   \vspace{2pt}
   \resumeSubHeadingListStart
     \small{\item{
-        \textbf{Kaggle Expert (since Feb' 23):}{ Researched state-of-the-art models and optimization algorithms in Natural Language Processing (NLP) and Computer Vision (CV). Finetuned models with different hyperparameters, training techniques, and model architectures in PyTorch} \\ \vspace{3pt}
-        
         \textbf{NYU Accelerated Master Scholarship (Half Tuition):}{ Awarded to undergraduate students who complete one-fourth of master's requirement coursework in their undergraduate study.} \\ \vspace{3pt}
         
         \textbf{NYU Dean's Undergraduate Research Fund}{ Awarded to undergraduate students who have been actively researching as an undergraduate.} \\ \vspace{3pt}
 
+        \textbf{Kaggle Expert (since Feb' 23):}{ Researched state-of-the-art models and optimization algorithms in Natural Language Processing (NLP) and Computer Vision (CV). Finetuned models with different hyperparameters, training techniques, and model architectures in PyTorch} \\ \vspace{3pt}
     }}
   \resumeSubHeadingListEnd
 
